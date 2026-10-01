@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SafePass - Privacy Policy</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      background-color: #f9fafb;
+      margin: 0;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+      border: 1px solid #e5e7eb;
+    }
+    h1 {
+      color: #2B2E83;
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+    .updated {
+      color: #6b7280;
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+    h2 {
+      color: #111827;
+      font-size: 20px;
+      margin-top: 28px;
+      border-bottom: 1px solid #f3f4f6;
+      padding-bottom: 8px;
+    }
+    p, li {
+      color: #374151;
+      font-size: 15px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .badge {
+      display: inline-block;
+      background: #eff6ff;
+      color: #2B2E83;
+      font-weight: 600;
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      margin-bottom: 16px;
+    }
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 13px;
+      color: #9ca3af;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <span class="badge">100% Offline & Private</span>
+    <h1>Privacy Policy for SafePass</h1>
+    <div class="updated">Effective Date: September 29, 2026</div>
+
+    <p>SafePass is designed from the ground up with a strict privacy-first architecture. Our core philosophy is simple: <strong>your data belongs exclusively to you and should never leave your device</strong>.</p>
+
+    <h2>1. Zero Data Collection & Zero Internet Access</h2>
+    <p>SafePass does <strong>not</strong> collect, transmit, share, or sell any personal data, usage data, or credentials. The application operates 100% offline:</p>
+    <ul>
+      <li>The application does not include the Android <code>android.permission.INTERNET</code> permission in release builds.</li>
+      <li>The application does not contain remote servers, cloud sync APIs, tracking software, advertising SDKs, or third-party analytics (such as Google Analytics or Firebase Crashlytics).</li>
+    </ul>
+
+    <h2>2. Local Storage and Encryption Architecture</h2>
+    <p>All data entered into SafePass (account titles, usernames, passwords, categories, and notes) is stored solely in a local SQLite database on your device:</p>
+    <ul>
+      <li>All sensitive fields are encrypted at rest using industry-standard <strong>AES-256 (CBC mode with PKCS7 padding)</strong>.</li>
+      <li>Cryptographic encryption keys and master password hashes are generated and maintained in hardware-backed secure storage via the Android KeyStore / FlutterSecureStorage system.</li>
+      <li>Plaintext credentials only exist transiently in device memory while viewing or editing an entry.</li>
+    </ul>
+
+    <h2>3. Biometric Authentication</h2>
+    <p>If you choose to enable Biometric Unlock (Fingerprint / Face Recognition), authentication is handled entirely by your device's native operating system through AndroidX BiometricPrompt APIs. SafePass does not capture, store, or process raw biometric data.</p>
+
+    <h2>4. Encrypted Backups and Data Deletion</h2>
+    <p>You have full ownership and control over your vault data:</p>
+    <ul>
+      <li><strong>Backups:</strong> You can export an offline backup file at any time. All vault items inside exported backup files remain AES-256 encrypted.</li>
+      <li><strong>Data Deletion:</strong> You can delete individual entries at any time inside the app. To completely purge all stored vault data and encryption keys, simply uninstall the application or clear SafePass app storage in your Android system settings.</li>
+    </ul>
+
+    <h2>5. Changes to This Privacy Policy</h2>
+    <p>Because SafePass is a completely offline application with zero telemetry, this privacy policy will only be updated if future application releases introduce major architectural changes. Any updates will always reflect our commitment to offline data privacy.</p>
+
+    <h2>6. Contact Us</h2>
+    <p>If you have any questions or inquiries regarding SafePass or this Privacy Policy, please contact the developer via the email provided on the Google Play Store developer listing.</p>
+
+    <footer>
+      &copy; 2026 SafePass. All rights reserved. 100% Offline Password Manager.
+    </footer>
+  </div>
+</body>
+</html>
